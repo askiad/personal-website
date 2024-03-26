@@ -20,7 +20,7 @@ Research
 ======
 **Accelerating Mixture of Experts**\
 *work in progress*\
-Sparsely activated Mixture of Expert models (MoE) increase model size with a sub-linear increase in computation cost. However, this benefit comes at the expense of significantly higher memory capacity requirements. This work proposes a novel design that significantly reduces the memory footprint of MoE models while simultaneously reducing system latency and leading to faster convergence during training.
+Sparsely activated Mixture of Expert models (MoE) increase model size with a sub-linear increase in computation cost. However, this benefit comes at the expense of significantly higher memory capacity requirements. We propose a novel design that significantly reduces the memory footprint of MoE models while simultaneously reducing system latency and leading to faster convergence during training.
 
 **High-Throughput and Flexible End-host Networking**\
 *to appear in OSDI '24*\
