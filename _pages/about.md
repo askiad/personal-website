@@ -1,49 +1,83 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Athinagoras Skiadopoulos"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+I am a PhD candidate in Electrical Engineering at Stanford University, where I am advised by [Christos Kozyrakis](https://web.stanford.edu/~kozyraki/). I am partially supported by a [Stanford Graduate Fellowship](https://vpge.stanford.edu/fellowships-funding/sgf) as the Cisco Systems Fellow.
 
-A data-driven personal website
+My recent research explores computer systems for large-scale machine learning workloads.
+Specifically, my core goal is to accelerate training for multi-trillion parameter models.
+To tackle this challenge, I focus on designing high-throughput end-host network stack architectures, optimizing collective communication, and developing novel memory management frameworks.
+
+Research
 ======
-Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+**Accelerating Mixture of Experts**\
+*work in progress*\
+Sparsely activated Mixture of Expert models (MoE) increase model size with a sub-linear increase in computation cost. However, this benefit comes at the expense of significantly higher memory capacity requirements. This work proposes a novel design that significantly reduces the memory footprint of MoE models while simultaneously reducing system latency and leading to faster convergence during training.
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+**High-Throughput and Flexible End-host Networking**\
+*to appear in OSDI '24*\
+End-host network stacks are struggling to provide both terabit throughput and protocol flexibility.
+Today's high-performance RDMA solutions terminate the protocol in the NIC, and do not allow users to easily customize the transport protocol to address diverse workloads and deployments.
+In our work, we physically separate the data and control paths, to combine RDMA performance with robust protocols like TCP.
+Our design enables a high-throughput sender and receiver zero-copy data path to any endpoint (e.g. GPUs),
+and an independent control path to execute arbitrary transport protocols in any execution environment (e.g. the Linux kernel).
 
-Getting started
+**A Database Operating System**\
+*VLDB '22, CIDR '22, Poly '21*\
+This project pursues the direction of building distributed systems that leverage the guarantees of databases instead of reimplementing them.
+The focus is on transparently utilizing database features such as efficiency, transactional guarantees, and the programmability of a declarative language.
+In the DBOS project we build a novel Operating System stack, and a high-performance FaaS platform on top of a DBMS.
+
+
+Publications
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+[High-throughput and Flexible Host Networking via Control and Data Path Physical Separation](#publications)\
+**A Skiadopoulos**, Z Xie, M Zhao, Q Cai, S Agarwal, J Adelmann, D Ahern, C Contavalli, M Goldflam, V Mayatskikh, R Raja, D Walton, R Agarwal, S Mukherjee, C Kozyrakis\
+*18th USENIX Symposium on Operating Systems Design and Implementation (OSDI '24)*
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+[Scaling a Declarative Cluster Manager Architecture with Query Optimization Techniques](https://dl.acm.org/doi/pdf/10.14778/3603581.3603599)\
+K Rong, M Budiu, **A Skiadopoulos**, L Suresh, A Tai\
+*Proceedings of the VLDB Endowment, Vol. 16, No. 10 (VLDB '23)*
 
-**Markdown generator**
+[Apiary: A DBMS-Integrated Transactional Function-as-a-Service Framework](https://arxiv.org/pdf/2208.13068.pdf)\
+P Kraft, Q Li, K Kaffes, **A Skiadopoulos**, D Kumar, D Cho, J Li, R Redmond, N Weckwerth, B Xia, P Bailis, MJ Cafarella, G Graefe, J Kepner, C Kozyrakis, M Stonebraker, L Suresh, X Yu, M Zaharia\
+*arXiv preprint, 2023*
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the academicpages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+[A Progress Report on DBOS: A Database-oriented Operating System](files/dbos-cidr.pdf)\
+Q Li, P Kraft, K Kaffes, **A Skiadopoulos**, D Kumar, J Li, MJ Cafarella, G Graefe, J Kepner, C Kozyrakis, M Stonebraker, L Suresh, M Zaharia\
+*12th Annual Conference on Innovative Data Systems Research (CIDR '22).*
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+[DBOS: a DBMS-oriented Operating System](https://dl.acm.org/doi/pdf/10.14778/3485450.3485454)\
+**A Skiadopoulos**, Q Li, P Kraft, K Kaffes, D Hong, S Mathew, D Bestor, MJ Cafarella, V Gadepally, G Graefe, J Kepner, C Kozyrakis, T Kraska, M Stonebraker, L Suresh, M Zaharia\
+*Proceedings of the VLDB Endowment, Vol. 15, No 1 (VLDB '22)*
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
 
-For more info
-------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+Internships
+======
+[Enfabrica](https://enfabrica.net/), Software Engineering Research Intern\
+Mentor: [Shrijeet Mukherjee](https://www.linkedin.com/in/shrijeet-mukherjee-b275/)\
+Summer of 2023
+
+[Enfabrica](https://enfabrica.net/), Software Engineering Research Intern\
+Mentor: [Shrijeet Mukherjee](https://www.linkedin.com/in/shrijeet-mukherjee-b275/)\
+Summer of 2022
+
+[VMware](https://www.vmware.com/), Research Intern\
+Mentor: [Lalith Suresh](https://lalith.in/about/)\
+Summer of 2021
+
+
+Contact
+======
+
+Email:
+<code class="language-plaintext"><span>a</span><span style="display:none;">HIDDEN</span><span>s</span><span>k</span><span style="display:none;">HIDDEN</span><span>i</span><span>a</span><span style="display:none;">HIDDEN</span><span>d</span><span>@</span><span>s</span><span style="display:none;">HIDDEN</span><span>tanf</span><span style="display:none;">HIDDEN</span><span>ord</span><span>.</span><span>edu</span></code>
+
+Office: 353 Jane Stanford Way, Gates CS Building Room 418, Stanford CA
+

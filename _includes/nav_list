@@ -10,6 +10,8 @@
           {% comment %}internal/external URL check{% endcomment %}
           {% if nav.url contains "://" %}
             {% assign domain = "" %}
+          {% elsif nav.url contains "#" %}
+            {% assign domain = "" %}
           {% else %}
             {% assign domain = base_path %}
           {% endif %}
