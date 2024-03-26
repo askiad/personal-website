@@ -1,11 +1,14 @@
 ---
 permalink: /
-title: "About"
+title: ""
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
+
+About
+======
 
 I am a PhD candidate in Electrical Engineering at Stanford University, where I am advised by [Christos Kozyrakis](https://web.stanford.edu/~kozyraki/). I am partially supported by a [Stanford Graduate Fellowship](https://vpge.stanford.edu/fellowships-funding/sgf) as the Cisco Systems Fellow.
 
