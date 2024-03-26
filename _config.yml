@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 title                    : "Athinagoras Skiadopoulos"
-title_separator          : "3-"
+title_separator          : "-"
 name                     : "Athinagoras Skiadopoulos"
 description              : &description "PhD candidate at Stanford University"
 url                      : https://stanford.edu/~askiad
