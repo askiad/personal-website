@@ -23,7 +23,7 @@ Research
 Sparsely activated Mixture of Expert models (MoE) increase model size with a sub-linear increase in computation cost. However, this benefit comes at the expense of significantly higher memory capacity requirements. We propose a novel design that significantly reduces the memory footprint of MoE models while simultaneously reducing system latency and leading to faster convergence during training.
 
 **High-Throughput and Flexible End-host Networking**\
-*accepted at OSDI '24*\
+*OSDI '24*\
 End-host network stacks are struggling to provide both terabit throughput and protocol flexibility.
 Today's high-performance RDMA solutions terminate the protocol in the NIC, and do not allow users to easily customize the transport protocol to address diverse workloads and deployments.
 In our work, we physically separate the data and control paths, to combine RDMA performance with robust protocols like TCP.
@@ -40,7 +40,7 @@ In the DBOS project we build a novel Operating System stack, and a high-performa
 Publications
 ======
 
-[High-throughput and Flexible Host Networking via Control and Data Path Physical Separation](#publications)\
+[High-throughput and Flexible Host Networking via Control and Data Path Physical Separation](files/osdi24-skiadopoulos.pdf)\
 **A Skiadopoulos**, Z Xie, M Zhao, Q Cai, S Agarwal, J Adelmann, D Ahern, C Contavalli, M Goldflam, V Mayatskikh, R Raja, D Walton, R Agarwal, S Mukherjee, C Kozyrakis\
 *accepted at 18th USENIX Symposium on Operating Systems Design and Implementation (OSDI '24)*
 
