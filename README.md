@@ -31,7 +31,12 @@ When you are initially working your website, it is very useful to be able to pre
 ## Deployment
 
 1. Run `JEKYLL_ENV=production bundle exec jekyll build`
-1. Copy the contents of `_site` to server (e.g., WWW in AFS via the Fetch app)
+1. Copy the contents of `_site` to server (e.g., WWW in AFS via the Fetch app). For stanford, use:
+    * Hostname: cardinal.stanford.edu
+    * Username: [SUNet ID]
+    * Connection: SFTP
+    * Initial folder: WWW/
+    * Port: 22
 
 # Maintenance
 
