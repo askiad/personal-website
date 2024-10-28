@@ -40,9 +40,13 @@ In the DBOS project we build a novel Operating System stack, and a high-performa
 Publications
 ======
 
+[ReCycle: Resilient Training of Large DNNs using Pipeline Adaption](https://arxiv.org/pdf/2405.14009)\
+S Gandhi, M Zhao, **A Skiadopoulos**, C Kozyrakis.\
+*30th Symposium on Operating Systems Principles (SOSP '24)*
+
 [High-throughput and Flexible Host Networking via Control and Data Path Physical Separation](files/osdi24-skiadopoulos.pdf)\
 **A Skiadopoulos**, Z Xie, M Zhao, Q Cai, S Agarwal, J Adelmann, D Ahern, C Contavalli, M Goldflam, V Mayatskikh, R Raja, D Walton, R Agarwal, S Mukherjee, C Kozyrakis\
-*accepted at 18th USENIX Symposium on Operating Systems Design and Implementation (OSDI '24)*
+*18th USENIX Symposium on Operating Systems Design and Implementation (OSDI '24)*
 
 [Scaling a Declarative Cluster Manager Architecture with Query Optimization Techniques](https://dl.acm.org/doi/pdf/10.14778/3603581.3603599)\
 K Rong, M Budiu, **A Skiadopoulos**, L Suresh, A Tai\
