@@ -12,15 +12,16 @@ About
 
 I am a PhD candidate in Electrical Engineering at Stanford University, where I am advised by [Christos Kozyrakis](https://web.stanford.edu/~kozyraki/). I am partially supported by a [Stanford Graduate Fellowship](https://vpge.stanford.edu/fellowships-funding/sgf) as the Cisco Systems Fellow.
 
-My recent research explores computer systems for large-scale machine learning workloads.
+My recent research explores computer systems for large-scale artificial intelligence workloads.
 Specifically, my core goal is to accelerate training for multi-trillion parameter models.
 To tackle this challenge, I focus on designing high-throughput end-host network stack architectures, optimizing collective communication, and developing novel memory management frameworks.
 
 Research
 ======
 **Accelerating Mixture of Experts**\
-*work in progress*\
-Sparsely activated Mixture of Expert models (MoE) increase model size with a sub-linear increase in computation cost. However, this benefit comes at the expense of significantly higher memory capacity requirements. We propose a novel design that significantly reduces the memory footprint of MoE models while simultaneously reducing system latency and leading to faster convergence during training.
+*under submission*\
+Sparsely activated Mixture of Experts (MoE) models have have seen widespread adoption thanks to their ability to scale model size with sub-linear computational cost. However, the non-uniform expert activation patterns during MoE training lead to GPU load imbalance, creating a critical tradeoff between convergence speed (degraded by token drops) and system latency (imposed by overloaded experts or costly expert placement reshuffling).
+In this work, we present a novel adaptive expert replication system design. Our system minimizes token drops to avoid compromising convergence speed, while enabling per-iteration expert placement adaptation with no overheads to effectively load balance resource utilization and minimize iteration latency.
 
 **High-Throughput and Flexible End-host Networking**\
 *OSDI '24*\
@@ -39,6 +40,10 @@ In the DBOS project we build a novel Operating System stack, and a high-performa
 
 Publications
 ======
+
+[Accelerating Mixture-of-Experts Training with Adaptive Expert Replication](https://arxiv.org/pdf/2504.19925)\
+**A Skiadopoulos**, M Zhao, S Gandhi, T Norrie, S Mukherjee, C Kozyrakis.\
+*arXiv preprint, 2025*
 
 [ReCycle: Resilient Training of Large DNNs using Pipeline Adaption](https://arxiv.org/pdf/2405.14009)\
 S Gandhi, M Zhao, **A Skiadopoulos**, C Kozyrakis.\
